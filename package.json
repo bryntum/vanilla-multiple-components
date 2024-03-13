@@ -1,0 +1,22 @@
+{
+  "name": "multiple-demo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "@bryntum/core-thin": "^5.6.8",
+    "@bryntum/engine-thin": "^5.6.8",
+    "@bryntum/grid-thin": "^5.6.8",
+    "@bryntum/taskboard": "^5.6.8",
+    "@bryntum/taskboard-thin": "^5.6.8",
+    "sass": "^1.71.1"
+  }
+}

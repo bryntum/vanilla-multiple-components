@@ -1,0 +1,187 @@
+{
+  "success": true,
+  "tasks": {
+    "rows": [
+      {
+        "id": 1,
+        "name": "Bug with rendering",
+        "description": "Try it on any demo, reproduces easily",
+        "status": "review",
+        "prio": "medium",
+        "tags": "bug,reproduced"
+      },
+      {
+        "id": 2,
+        "name": "Add button to toolbar",
+        "description": "Should look like a proper button, must be clickable",
+        "status": "done",
+        "prio": "low",
+        "tags": "code,styling"
+      },
+      {
+        "id": 3,
+        "name": "Remove overflow",
+        "description": "It is overflowing everywhere, it should not",
+        "status": "doing",
+        "prio": "medium",
+        "tags": "cleanup,styling"
+      },
+      {
+        "id": 4,
+        "name": "Test in Safari",
+        "description": "Also remember to test on IOS",
+        "status": "review",
+        "prio": "low",
+        "tags": "qa"
+      },
+      {
+        "id": 5,
+        "name": "Write tests",
+        "description": "Boss says we have to, better get started soon since test coverage is approximately 5%",
+        "status": "done",
+        "prio": "high",
+        "readOnly": true
+      },
+      {
+        "id": 6,
+        "name": "Refactor base classes!!",
+        "description": "It is currently a mess, un-mess it please",
+        "status": "todo",
+        "prio": "low",
+        "tags": "code,cleanup"
+      },
+      {
+        "id": 7,
+        "name": "Update themes",
+        "description": "All themes need an overhaul, marketing is not happy with their current state",
+        "status": "todo",
+        "prio": "medium",
+        "tags": "ux,marketing"
+      },
+      {
+        "id": 8,
+        "name": "De-nest CSS",
+        "description": "It is practically impossible to override any selector, needs a major de-nesting",
+        "status": "todo",
+        "prio": "medium",
+        "tags": "cleanup"
+      },
+      {
+        "id": 9,
+        "name": "Compile using esbuild",
+        "description": "So quick you will think it did not do anything...",
+        "status": "doing",
+        "prio": "medium",
+        "tags": "trend"
+      },
+      {
+        "id": 10,
+        "name": "Reconfigure grunt",
+        "description": "Better ask DevOps to handle it",
+        "status": "review",
+        "prio": "high",
+        "tags": "devops"
+      }
+    ]
+  },
+  "resources": {
+    "rows": [
+      {
+        "id": 1,
+        "employed": "01-03-2014",
+        "team": "Developer",
+        "name": "Angelo",
+        "image": "angelo.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Celia",
+        "employed": "28-03-2006",
+        "team": "QA",
+        "image": "celia.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Dave",
+        "employed": "12-03-2015",
+        "team": "UX",
+        "image": "dave.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Emilia",
+        "employed": "18-07-2020",
+        "team": "Developer",
+        "image": "emilia.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Gloria",
+        "employed": "10-05-2018",
+        "team": "QA",
+        "image": "gloria.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Henrik",
+        "employed": "25-09-2011",
+        "team": "DevOps",
+        "image": "henrik.jpg"
+      }
+    ]
+  },
+  "assignments": {
+    "rows": [
+      {
+        "id": 1,
+        "event": 1,
+        "resource": 1
+      },
+      {
+        "id": 2,
+        "event": 2,
+        "resource": 2
+      },
+      {
+        "id": 3,
+        "event": 3,
+        "resource": 3
+      },
+      {
+        "id": 4,
+        "event": 4,
+        "resource": 4
+      },
+      {
+        "id": 5,
+        "event": 5,
+        "resource": 5
+      },
+      {
+        "id": 6,
+        "event": 6,
+        "resource": 6
+      },
+      {
+        "id": 7,
+        "event": 7,
+        "resource": 1
+      },
+      {
+        "id": 8,
+        "event": 8,
+        "resource": 2
+      },
+      {
+        "id": 9,
+        "event": 9,
+        "resource": 3
+      },
+      {
+        "id": 10,
+        "event": 10,
+        "resource": 4
+      }
+    ]
+  }
+}

@@ -1,0 +1,122 @@
+@import "@bryntum/core-thin/core.stockholm.css";
+@import "@bryntum/grid-thin/grid.stockholm.css";
+@import "@bryntum/taskboard-thin/taskboard.stockholm.css";
+
+.b-taskboardbase {
+  --taskboard-body-padding: 2em;
+  --taskboard-column-gap: 2em;
+
+  --taskboard-card-border-top-radius: 5px;
+  --taskboard-card-border-bottom-radius: 5px;
+
+  --taskboard-column-header-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  --taskboard-column-header-border-radius: 5px 5px 0 0;
+  --taskboard-column-background: #f5f5f5;
+  --taskboard-column-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  --taskboard-column-border-radius: 0 0 5px 5px;
+
+  --taskboard-card-header-background: currentColor;
+  --taskboard-card-header-color: #fff;
+  --taskboard-card-body-padding: var(--taskboard-card-padding);
+}
+
+.b-theme-classic-dark .b-taskboardbase {
+  --taskboard-column-header-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.7);
+  --taskboard-column-background: #292929;
+  --taskboard-column-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.7);
+}
+
+.b-theme-classic-light .b-taskboardbase,
+.b-theme-material .b-taskboardbase {
+  --taskboard-column-background: #fbfbfb;
+}
+
+.b-theme-classic .b-taskboardbase {
+  --taskboard-column-background: #d9d9d9;
+}
+
+// Above headers box-shadow
+.b-taskboard-column {
+  z-index: 3;
+}
+
+// Make resource avatars wide, to leave room for the editor
+.b-taskboard-resource-avatars {
+  min-width: 10em;
+}
+
+.b-simple-task-editor .b-resourcescombo {
+  // Contrast picker icon against header
+  .b-icon-picker {
+    color: #fff;
+  }
+
+  // Right align resources in the inline editor, to better match card layout
+  .b-chipview {
+    justify-content: flex-end;
+  }
+}
+
+.b-resource-avatar {
+  border: 1px solid #ddd;
+}
+
+// Use same color for the read-only icon as for the header
+.b-taskboard-card.b-readonly .b-taskboard-card-header::before {
+  color: var(--taskboard-card-header-color);
+}
+
+.prio {
+  color: #000000c6;
+  padding: 5px 20px;
+  border-radius: 50px;
+}
+.high-prio {
+  background-color: #ff7979;
+}
+.medium-prio {
+  background-color: #f1c40f;
+}
+.low-prio {
+  background-color: #3498db;
+}
+.b-grid {
+  margin: 20px 0px;
+}
+
+/* Styling for column header */
+.b-grid-header-text {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Spacing for cells */
+.b-grid-row {
+  height: 60px;
+}
+
+.b-toolbar-text {
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.name-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.avatar {
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 50%;
+}
+
+.badge {
+  border-radius: 1em;
+  padding: 0.4em 0.8em;
+  color: #fff;
+  text-align: center;
+  min-width: 6em;
+}
