@@ -1,7 +1,12 @@
 @import "@bryntum/core-thin/core.stockholm.css";
 @import "@bryntum/grid-thin/grid.stockholm.css";
 @import "@bryntum/taskboard-thin/taskboard.stockholm.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
+html,
+body {
+  font-family: Poppins, "Open Sans", Helvetica;
+}
 .b-taskboardbase {
   --taskboard-body-padding: 2em;
   --taskboard-column-gap: 2em;
@@ -42,7 +47,9 @@
 
 // Make resource avatars wide, to leave room for the editor
 .b-taskboard-resource-avatars {
-  min-width: 10em;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .b-simple-task-editor .b-resourcescombo {
@@ -58,7 +65,12 @@
 }
 
 .b-resource-avatar {
-  border: 1px solid #ddd;
+  border: 2px solid #ddd;
+}
+
+.b-taskboard-card-body {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #a1a1a1;
 }
 
 // Use same color for the read-only icon as for the header
@@ -66,28 +78,35 @@
   color: var(--taskboard-card-header-color);
 }
 
+.b-taskboard-card-footer {
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
 .prio {
-  color: #000000c6;
-  padding: 5px 20px;
+  color: white;
+  padding: 5px 22px;
   border-radius: 50px;
 }
 .high-prio {
-  background-color: #ff7979;
+  background-color: #c23616;
 }
 .medium-prio {
-  background-color: #f1c40f;
+  background-color: #c99916;
 }
 .low-prio {
-  background-color: #3498db;
+  background-color: #259413;
 }
 .b-grid {
   margin: 20px 0px;
 }
 
 /* Styling for column header */
-.b-grid-header-text {
-  font-weight: bold;
+.b-grid-header-text,
+.b-column-title-text {
+  font-weight: 600;
   font-size: 18px;
+  color: #646464;
 }
 
 /* Spacing for cells */

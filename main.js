@@ -19,12 +19,25 @@ const getResources = async () => {
   return data.resources.rows;
 };
 
+const getAssignments = async () => {
+  const res = await fetch("/data.json");
+  const data = await res.json();
+
+  return data.assignments.rows;
+};
+
+const assignments = await getAssignments();
+
 const getAvatars = (value) => {
   return {
     tag: "img",
     class: "avatar",
     src: `/users/${value.toLowerCase()}.jpg`,
   };
+};
+
+const getCurrentTasks = (id) => {
+  return assignments.filter((task) => task.resource === id);
 };
 
 const grid = new Grid({
@@ -37,7 +50,6 @@ const grid = new Grid({
     {
       field: "name",
       text: "Name",
-      icon: "b-fa b-fa-user",
       flex: 1,
       renderer({ value }) {
         return {
@@ -49,9 +61,9 @@ const grid = new Grid({
     {
       field: "team",
       text: "Team",
-      icon: "b-fa b-fa-people-group",
       flex: 1,
       renderer({ value }) {
+        console.log("VALUE - ", value);
         return {
           class: "badge", // the style should be defined in .css file
           style: {
@@ -62,9 +74,18 @@ const grid = new Grid({
       },
     },
     {
+      field: "position",
+      text: "Position",
+      flex: 1,
+    },
+    {
       field: "employed",
       text: "Employed Since",
-      icon: "b-fa b-fa-calendar",
+      flex: 1,
+    },
+    {
+      field: "address",
+      text: "Address",
       flex: 1,
     },
   ],
@@ -113,7 +134,7 @@ const taskBoard = new TaskBoard({
         required: true,
       },
     },
-    resources: { type: "resourceAvatars" },
+    // resources: { type: "resourceAvatars" },
   },
 
   footerItems: {
@@ -124,7 +145,8 @@ const taskBoard = new TaskBoard({
         `<div class='prio ${taskRecord.prio}-prio'>${taskRecord.prio}</div>`,
       editor: { type: "combo", items: priority },
     },
-    tags: { type: "tags" },
+    resources: { type: "resourceAvatars" },
+    // tags: { type: "tags" },
   },
 
   // Url for resource avatar images
